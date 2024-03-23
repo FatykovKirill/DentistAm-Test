@@ -1,0 +1,114 @@
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+@import 'https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap';
+
+$red: #E21F4D;
+$black: #3F3F3F;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 16px;
+  color: $black;
+}
+
+.red-words {
+  color: $red;
+}
+
+.btn {
+  width: 292px;
+  height: 91px;
+  background-color: $red;
+  color: white;
+  font-weight: 600;
+  font-size: 18px;
+  border: none;
+  border-radius: 91px;
+  box-shadow: 0 20px 34px rgb(226, 31, 77, 0.7), inset 0px 0px 27px 4px rgba(255, 255, 255, 0.46);
+}
+
+.btn:hover {
+  color: $red;
+  border: $red 1px solid;
+  font-size: 17px;
+}
+
+.arrow-right,
+.arrow-left {
+  background-color: white;
+  width: 55.6px;
+  height: 55.6px;
+  border-radius: 50%;
+  box-shadow: 0px 15px 58.8px rgba(0, 0, 0, 0.08);
+}
+
+.arrow-right::after {
+  content: '';
+  display: block;
+  position: relative;
+  top: 38%;
+  left: 29%;
+  width: 15px;
+  height: 15px;
+  transform: rotate(45deg);
+  border-top: 3px solid $red;
+  border-right: 3px solid $red;
+  border-radius: 1px;
+}
+
+.arrow-left::after {
+  content: '';
+  display: block;
+  position: relative;
+  top: 38%;
+  left: 37%;
+  width: 15px;
+  height: 15px;
+  transform: rotate(-135deg);
+  border-top: 3px solid $red;
+  border-right: 3px solid $red;
+  border-radius: 1px;
+}
+
+.section-title {
+  display: inline-block;
+  height: 46px;
+  padding: 13px 35px;
+  border-radius: 350px;
+  background-color: white;
+  box-shadow: 0px 15.26px 58.85px rgba($color: #000000, $alpha: 0.08);
+
+  h2 {
+    font-size: 14px;
+    font-weight: 500;
+    color: $red;
+  }
+}
+
+.red-star-wrapper {
+  position: relative;
+
+  img {
+    position: absolute;
+    top: -4px;
+    left: -10px;
+
+  }
+}
+
+@import 'header';
+@import 'main/our-services';
+@import 'main/our-company';
+@import 'main/our-specialists';
+@import 'main/our-principles';
+@import 'main/reviews';
+@import 'main/licenses';
+@import 'footer';

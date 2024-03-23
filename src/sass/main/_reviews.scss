@@ -1,0 +1,127 @@
+.reviews {
+  background-color: #f5f5f5;
+  padding-top: 50px;
+  padding-bottom: 103px;
+  border-radius: 50px;
+  margin: 0 auto;
+  max-width: 1500px;
+  margin-top: 75px;
+
+  &-inspiring {
+    margin-top: 20px;
+    font-size: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  &-tabs {
+    margin-top: 20px;
+    font-size: 14px;
+    font-weight: 400;
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+
+    .tab {
+      cursor: pointer;
+    }
+
+    .active {
+      color: $red;
+    }
+  }
+
+  &-text {
+    margin-top: 116px;
+  }
+
+  &-links {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+
+    a {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      box-shadow: 0px 13px 24px rgba(0, 0, 0, 0.10);
+      background-color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  &-videos {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+
+    video {
+      width: 792px;
+      height: 482px;
+    }
+
+    .choose-videos {
+      position: relative;
+
+      .arrow-right,
+      .arrow-left {
+        position: absolute;
+        left: 35%;
+        cursor: pointer;
+      }
+
+      .arrow-right {
+        top: -60px;
+        transform: rotate(-90deg);
+      }
+
+      .arrow-left {
+        bottom: -60px;
+        transform: rotate(-90deg);
+      }
+
+      .active {
+        border: 1px solid $red;
+      }
+
+      &-items {
+        width: 211px;
+        height: 72px;
+        border-radius: 10px;
+        background: white;
+        box-shadow: 0px 15px 58.85px rgba(0, 0, 0, 0.08);
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin-top: 10px;
+        cursor: pointer;
+
+        img {
+          border: 12px solid white;
+          width: 50px;
+          height: 50px;
+        }
+
+        .item-content {
+          .name {
+            font-size: 14px;
+            font-weight: 700;
+          }
+
+          .city {
+            font-size: 11px;
+            font-weight: 400;
+            opacity: 0.6;
+          }
+        }
+      }
+
+      &-items:first-child {
+        margin-top: 0;
+      }
+    }
+  }
+}

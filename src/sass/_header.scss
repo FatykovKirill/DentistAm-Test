@@ -1,0 +1,260 @@
+header {
+  background: url(../images/header-bg.png) no-repeat center;
+  background-size: cover;
+
+  .navbar {
+    &-col {
+      display: flex;
+      align-items: center;
+      width: 50%;
+    }
+
+    &-col-2 {
+      justify-content: space-between;
+    }
+
+    &-stripe {
+      display: block;
+      height: 26px;
+      width: 1px;
+      background-color: #3F3F3F;
+      opacity: 20%;
+      margin-right: 23px;
+    }
+
+    &-company-name {
+
+      span {
+        font-size: 14px;
+        font-weight: 400;
+        display: block;
+        color: $black;
+        width: 70%;
+      }
+    }
+
+    &-logo {
+      margin-right: 29px;
+    }
+
+    &-map {
+      display: flex;
+      align-items: center;
+
+      .map {
+        width: 74px;
+        height: 74px;
+        border: white 12px solid;
+        border-radius: 50%;
+        margin-right: 16px;
+
+      }
+
+      .adress {
+        width: 55%;
+        font-size: 14px;
+        font-weight: 400;
+        color: $black;
+      }
+    }
+
+    &-tel {
+      color: #767676;
+      background-color: #fff;
+      font-weight: 500;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 233px;
+      height: 56px;
+      border-radius: 56px;
+      padding: 11px 25px 10px 13px;
+
+      .tel-col {
+        display: flex;
+        align-items: center;
+      }
+
+      .tel-info {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+      }
+
+      .tel-img {
+        width: 31px;
+        height: 31px;
+        border-radius: 50%;
+        background-color: $red;
+        display: flex;
+
+        img {
+          display: block;
+          margin: auto;
+        }
+      }
+
+
+      .tel-head {
+        font-size: 20px;
+
+      }
+
+      .call-all-time {
+        font-size: 10px;
+        display: flex;
+        align-items: center;
+      }
+
+      .call-all-time::before {
+        content: '';
+        display: block;
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+        background-color: #79BC6E;
+        margin-right: 6px;
+      }
+    }
+  }
+
+  .header {
+
+    &-doctor-img {
+      position: relative;
+
+      .signature {
+        position: absolute;
+        left: 420px;
+        bottom: 8px;
+      }
+    }
+
+    .doctor-info {
+      position: absolute;
+      bottom: 76px;
+      left: 193px;
+
+      .name-doctor {
+        display: flex;
+        color: $red;
+        font-size: 16px;
+        font-weight: 700;
+        position: relative;
+        right: 24px;
+        width: 185px;
+        background-color: white;
+        padding: 9px 19px 13px 18px;
+        border-radius: 5px;
+        box-shadow: 0px 11px 24px rgba($color: #000000, $alpha: 0.1);
+        z-index: 2;
+
+        .user-block {
+          display: flex;
+          width: 26px;
+          height: 26px;
+          border-radius: 50%;
+          box-shadow: 0px 13px 24px rgba($color: #000000, $alpha: 0.1);
+
+          img {
+            display: block;
+            margin: auto;
+          }
+        }
+      }
+
+      .name-doctor span {
+        margin-right: 11px;
+      }
+
+      .pazan-quote {
+        position: relative;
+        width: 223px;
+        z-index: 1;
+      }
+
+      .pazan-quote span {
+        border-radius: 5px;
+        padding: 6px 6px 13px 23px;
+        background-color: white;
+        color: $black;
+        font-size: 18px;
+        font-weight: 500;
+      }
+    }
+
+    .pazan-quote span:last-child {
+      display: block;
+      width: 167px;
+      color: #969696;
+      font-size: 11px;
+      font-weight: 400;
+    }
+
+    &-title {
+      position: relative;
+      right: 57px;
+      color: $black;
+      font-size: 55px;
+      font-weight: 800;
+    }
+
+    &-subtitle {
+      font-size: 18px;
+      font-weight: 400;
+      color: $black;
+      margin-top: 41px;
+      width: 65%;
+    }
+
+    &-btn {
+      margin-top: 32px;
+    }
+
+    &-implantation {
+      position: relative;
+      margin-top: 40px;
+      background-color: white;
+      width: 455px;
+      height: 140px;
+      border-radius: 10px;
+      padding: 22px 53px 21px 28px;
+      display: flex;
+      align-items: center;
+      color: $black;
+
+      .implantation-img {
+        margin-right: 26px;
+      }
+
+      .implantation-info {
+        font-size: 13px;
+        font-weight: 400;
+
+        .info-title {
+          font-size: 18px;
+          font-weight: 600;
+        }
+
+        .info-subtitle {
+          margin-top: 5px;
+        }
+
+        .info-read-more {
+          margin-top: 10px;
+
+          a {
+            text-decoration: underline dotted rgb(63, 63, 63, 0.3);
+            color: $black;
+          }
+        }
+      }
+
+      .implantation-arrow {
+        position: absolute;
+        right: -32px;
+      }
+    }
+  }
+}
