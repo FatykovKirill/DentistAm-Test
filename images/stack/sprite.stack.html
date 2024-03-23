@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>SVG stack preview | svg-sprite</title>
+        <style>
+            body {
+                padding: 0;
+                margin: 0;
+                color: #666;
+                background: #fafafa;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 1em;
+                line-height: 1.4;
+            }
+
+            header {
+                display: block;
+                padding: 3em 3em 2em;
+                background-color: #fff;
+            }
+
+            header p {
+                margin: 2em 0 0;
+            }
+
+            section {
+                border-top: 1px solid #eee;
+                padding: 2em 3em 0;
+            }
+
+            section ul {
+                margin: 0;
+                padding: 0;
+            }
+
+            section li {
+                display: inline-block;
+                background-color: #fff;
+                position: relative;
+                margin: 0 2em 2em 0;
+                vertical-align: top;
+                border: 1px solid #ccc;
+                padding: 1em 1em 3em;
+                cursor: default;
+            }
+
+            .icon-box {
+                margin: 0;
+                width: 144px;
+                height: 144px;
+                position: relative;
+                background: #ccc url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12'%3E%3Cpath fill='%23fff' d='M6 0h6v6H6zM0 6h6v6H0z'/%3E%3C/svg%3E") top left repeat;
+                border: 1px solid #ccc;
+                display: table-cell;
+                vertical-align: middle;
+                text-align: center;
+            }
+
+            .icon {
+                display: inline-block;
+            }
+
+            h1 {
+                margin-top: 0;
+            }
+
+            h2 {
+                margin: 0;
+                padding: 0;
+                font-size: 1em;
+                font-weight: 400;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                position: absolute;
+                left: 1em;
+                right: 1em;
+                bottom: 1em;
+            }
+
+            footer {
+                display: block;
+                margin: 0;
+                padding: 0 3em 3em;
+            }
+
+            footer p {
+                margin: 0;
+                font-size: .7em;
+            }
+
+            footer a {
+                color: #0f7595;
+                margin-left: 0;
+            }
+        </style>
+
+<!--
+Sprite shape dimensions
+====================================================================================================
+You will need to set the sprite shape dimensions via CSS when you use them as stack SVGs, otherwise
+they would become a huge 100% in size. You may use the following dimension classes for doing so.
+They might well be outsourced to an external stylesheet of course.
+-->
+
+<style>
+ .svg-svg--adress-dims { width: 27px; height: 27px; }
+ .svg-svg--croses-dims { width: 13px; height: 12px; }
+ .svg-svg--icon-principles-1-dims { width: 30px; height: 31px; }
+ .svg-svg--icon-principles-2-dims { width: 30px; height: 31px; }
+ .svg-svg--icon-principles-3-dims { width: 30px; height: 31px; }
+ .svg-svg--icon-principles-4-dims { width: 30px; height: 31px; }
+ .svg-svg--logo-dims { width: 188px; height: 55px; }
+ .svg-svg--loupe-dims { width: 11px; height: 11px; }
+ .svg-svg--phone-dims { width: 25px; height: 29px; }
+ .svg-svg--red-star-dims { width: 13px; height: 13px; }
+ .svg-svg--red-user-dims { width: 10px; height: 12px; }
+ .svg-svg--tel-dims { width: 15px; height: 15px; }
+ .svg-svg--time-dims { width: 30px; height: 30px; }
+ .svg-svg--whatsapp-dims { width: 30px; height: 30px; }
+ .svg-svg--white-teeth-dims { width: 55px; height: 55px; }
+</style>
+
+<!--
+====================================================================================================
+-->
+
+    </head>
+    <body>
+        <header>
+            <h1>SVG stack preview</h1>
+            <p>This preview features an SVG stack. Please have a look at the HTML source for further details and be aware of the following constraints:</p>
+            <ul>
+                <li>Your browser has to <a href="https://caniuse.com/svg-fragment" target="_blank" rel="noopener noreferrer">support SVG fragment identifiers</a> for SVG stacks to work.</li>
+                <li>Support for SVG fragment identifiers hasn't always been that decent. For older browsers you will have to use some prolyfill like <a href="https://github.com/preciousforever/SVG-Stacker/blob/master/fixsvgstack.jquery.js" target="_blank" rel="noopener noreferrer">fixsvgstack.jquery.js</a>.</li>
+            </ul>
+        </header>
+        <section>
+
+<!--
+SVG stack
+====================================================================================================
+These SVG images make use of fragment identifiers (IDs) to reference certain portions of the
+external sprite. By default, all shapes inside the sprite are hidden by CSS. The `:target` pseudo
+selector is used to show the very shape that is referenced by the fragment identifier.
+-->
+
+            <ul>
+
+             <li title="svg--adress">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#svg--adress" class="svg-svg--adress-dims" alt="svg--adress">
+                    </div>
+                    <h2>svg--adress, </h2>
+                </li>
+             <li title="svg--croses">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#svg--croses" class="svg-svg--croses-dims" alt="svg--croses">
+                    </div>
+                    <h2>svg--croses, </h2>
+                </li>
+             <li title="svg--icon-principles-1">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#svg--icon-principles-1" class="svg-svg--icon-principles-1-dims" alt="svg--icon-principles-1">
+                    </div>
+                    <h2>svg--icon-principles-1, </h2>
+                </li>
+             <li title="svg--icon-principles-2">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#svg--icon-principles-2" class="svg-svg--icon-principles-2-dims" alt="svg--icon-principles-2">
+                    </div>
+                    <h2>svg--icon-principles-2, </h2>
+                </li>
+             <li title="svg--icon-principles-3">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#svg--icon-principles-3" class="svg-svg--icon-principles-3-dims" alt="svg--icon-principles-3">
+                    </div>
+                    <h2>svg--icon-principles-3, </h2>
+                </li>
+             <li title="svg--icon-principles-4">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#svg--icon-principles-4" class="svg-svg--icon-principles-4-dims" alt="svg--icon-principles-4">
+                    </div>
+                    <h2>svg--icon-principles-4, </h2>
+                </li>
+             <li title="svg--logo">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#svg--logo" class="svg-svg--logo-dims" alt="svg--logo">
+                    </div>
+                    <h2>svg--logo, </h2>
+                </li>
+             <li title="svg--loupe">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#svg--loupe" class="svg-svg--loupe-dims" alt="svg--loupe">
+                    </div>
+                    <h2>svg--loupe, </h2>
+                </li>
+             <li title="svg--phone">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#svg--phone" class="svg-svg--phone-dims" alt="svg--phone">
+                    </div>
+                    <h2>svg--phone, </h2>
+                </li>
+             <li title="svg--red-star">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#svg--red-star" class="svg-svg--red-star-dims" alt="svg--red-star">
+                    </div>
+                    <h2>svg--red-star, </h2>
+                </li>
+             <li title="svg--red-user">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#svg--red-user" class="svg-svg--red-user-dims" alt="svg--red-user">
+                    </div>
+                    <h2>svg--red-user, </h2>
+                </li>
+             <li title="svg--tel">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#svg--tel" class="svg-svg--tel-dims" alt="svg--tel">
+                    </div>
+                    <h2>svg--tel, </h2>
+                </li>
+             <li title="svg--time">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#svg--time" class="svg-svg--time-dims" alt="svg--time">
+                    </div>
+                    <h2>svg--time, </h2>
+                </li>
+             <li title="svg--whatsapp">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#svg--whatsapp" class="svg-svg--whatsapp-dims" alt="svg--whatsapp">
+                    </div>
+                    <h2>svg--whatsapp, </h2>
+                </li>
+             <li title="svg--white-teeth">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#svg--white-teeth" class="svg-svg--white-teeth-dims" alt="svg--white-teeth">
+                    </div>
+                    <h2>svg--white-teeth, </h2>
+                </li>
+         </ul>
+
+<!--
+====================================================================================================
+-->
+
+        </section>
+        <footer>
+            <p>Generated at Sat, 23 Mar 2024 14:24:07 GMT by <a href="https://github.com/svg-sprite/svg-sprite" target="_blank" rel="noopener noreferrer">svg-sprite</a>.</p>
+        </footer>
+    </body>
+</html>
